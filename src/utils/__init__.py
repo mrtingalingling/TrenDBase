@@ -1,14 +1,3 @@
-from importlib.machinery import SourceFileLoader
-from pathlib import Path
-
-userPath = Path.home()
-credDir = userPath / "git/.creds"
-twitterCred = credDir / "tweet_config.py"
-print(twitterCred)
-credModules = SourceFileLoader("tweet_config", str(twitterCred)).load_module()
-print(credModules)
-
-
 # # Add Sorting
 # # https://developers.google.com/sheets/api/samples/data#sort_a_range_with_multiple_sorting_specifications
 # # response = xyz.gsht_service.spreadsheets().get(spreadsheetId=spreadsheetId, ranges=[sheet_title], includeGridData=True).execute()
